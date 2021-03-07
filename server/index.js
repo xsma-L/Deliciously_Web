@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 
 const db = require('./db')
-const restaurantRouter = require('./routes/restaurants-router')
+const restaurantRouter = require('./routes/router')
 
 const app = express()
 const apiPort = 3001

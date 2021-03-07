@@ -3,8 +3,6 @@ const Restaurant = require('../models/restaurant-model')
 exports.createRestaurant = (req, res) => {
     const body = req.body
 
-    console.log("okokokk")
-
     if (!body) {
         return res.status(400).json({
             success: false,

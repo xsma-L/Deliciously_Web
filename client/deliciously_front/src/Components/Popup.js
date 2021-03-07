@@ -33,7 +33,7 @@ const Popup = (props)  => {
     return (
         <div className="popup-wrapper" style={ props.active } >
             <div id="image-1">
-                <div><span onClick={ props.close }>x</span></div>
+                <div><span className="close-span" onClick={ props.close }>x</span></div>
                 <Slider picture={ data.picture } />
             </div>
             <div className="popup">

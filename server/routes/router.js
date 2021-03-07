@@ -2,8 +2,13 @@ const express = require('express')
 
 const RestaurantCtrl = require('../controllers/restaurants-ctrl')
 
+const UserCtrl = require('../controllers/user-ctrl')
+
 const router = express.Router()
 
+router.post('/user', UserCtrl.createUser)
+
+router.post('/user/connect', UserCtrl.userLogin)
 
 router.post('/restaurant', RestaurantCtrl.createRestaurant)
 
