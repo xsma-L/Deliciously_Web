@@ -7,7 +7,7 @@ const router = express.Router()
 
 router.post('/restaurant', RestaurantCtrl.createRestaurant)
 
-router.put('/restaurant/:id',RestaurantCtrl.updateRestaurant)
+router.put('/restaurant/:id', RestaurantCtrl.updateRestaurant)
 
 router.delete('/restaurant/:id', RestaurantCtrl.deleteRestaurant)
 

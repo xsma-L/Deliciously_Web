@@ -1,23 +1,49 @@
-import React, { useState }  from 'react'
+import React, { useState, useEffect }  from 'react'
+
+import axios from 'axios'
+
+import Slider from './Slider'
 
 
 
 const Popup = (props)  => {
+    
+    let id = props.id;
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        if(id !== 0) {
+            const getData = async () => {
+                await axios({
+                    method: 'GET',
+                    url: `http://localhost:3001/api/restaurant/${id}`
+                })
+                .then (res => {
+                    setData(res.data.data);
+                })
+                .catch(err => {
+                    console.log(err)
+                });
+            }   
+            getData();
+        }
+    }, [id]);
 
     return (
         <div className="popup-wrapper" style={ props.active } >
             <div id="image-1">
-                <span onClick={ props.close }>x</span>
-                <img src="plats/bouillon.jpeg" alt="Bouillon-1" />
+                <div><span onClick={ props.close }>x</span></div>
+                <Slider picture={ data.picture } />
             </div>
             <div className="popup">
                 <div className="name-type">
-                    <span className="resto-name">Dumbo</span>
-                    <span className="resto-type">Burgers</span>
+                    <span className="resto-name">{ data.name }</span>
+                    <span className="resto-type">{ data.type }</span>
                 </div>
                 <div className="resto-adress">
-                    <span className="adress">64 rue Jea-Bapstiste pigalle, 75009</span>
-                    <span className="city">Paris</span>
+                    <span className="adress">{data.adress}</span>
+                    <span className="city">{data.city}</span>
                 </div>
                 <div className="infos">
                     <div className="bulle-data">

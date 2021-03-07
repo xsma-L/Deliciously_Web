@@ -57,8 +57,8 @@ exports.updateRestaurant = async (req, res) => {
 
         restaurant.name = body.name
         restaurant.type = body.type
-        restaurant.adress = boy.adress
-        restaurant.picture = doby.picture
+        restaurant.adress = body.adress
+        restaurant.picture = body.picture
         restaurant.info = body.info
 
         restaurant
@@ -87,7 +87,7 @@ exports.deleteRestaurant = async (req, res) => {
             })
         }
 
-        if (!movie) {
+        if (!restaurant) {
             return res.status(404).json({
                 success: false, error: 'Restaurant not found'
             })
@@ -101,7 +101,7 @@ exports.deleteRestaurant = async (req, res) => {
 }
 
 exports.getRestaurantById = async (req, res) => {
-    await Restaurant.findOne({_id: req.params.id }, (err, movie) => {
+    await Restaurant.findOne({_id: req.params.id }, (err, restaurant) => {
         if (err) {
             return res.status(400).json({
                 success: false, error: err
@@ -115,7 +115,7 @@ exports.getRestaurantById = async (req, res) => {
         }
 
         return res.status(200).json({
-            success: true, data: movie
+            success: true, data: restaurant
         })
 
     }).catch(err => console.log(err))

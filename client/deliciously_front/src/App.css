@@ -146,4 +146,13 @@
   background: #ff234d;
 }
 
+.test {
+  display: flex;
+  overflow: hidden;
+  background: blue;
+    width: fit-content;
+}
 
+.moi {
+  background: rebeccapurple;
+}
