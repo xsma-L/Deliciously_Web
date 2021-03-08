@@ -59,6 +59,7 @@ function App() {
 
   const logOut = () => {
     localStorage.clear();
+    alert('Veuillez recharger la page :/');
     setConnect(false)
   }
 
