@@ -6,9 +6,13 @@ import axios from 'axios'
 
 function Inscription (props) {
 
+  // States des data à envoyer
+
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
+  // Modification des states à chaque modification des inputs
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -25,6 +29,8 @@ function Inscription (props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    //  Envoi des data
+
     const formData = {
       username: username,
       email: email,
@@ -38,11 +44,11 @@ function Inscription (props) {
     })
     .then(res => {
       if (res.data.success) {
-        console.log('connect')
+        alert('Vous pouvez vous connecter !')
       }
     })
     .catch(err => {
-      console.log(err)
+      alert('Verifiez les données que vous avez enter')
     })
 }
 

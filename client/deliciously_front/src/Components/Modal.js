@@ -4,6 +4,8 @@ import { Modal, useModal, ModalTransition } from 'react-simple-hook-modal';
 
 import 'react-simple-hook-modal/dist/styles.css';
 
+//importation des formulaires
+
 import Inscription from './Forms/Inscription'
 import Login from './Forms/Login'
 import NewResaturant from './Forms/AddRestaurant'
@@ -11,11 +13,13 @@ import NewResaturant from './Forms/AddRestaurant'
 
 const MyModal = (props) => {
 
+    // info = cible (dans App.js)
     const [info, setInfo] = useState(props.data)
 
     const { isModalOpen, openModal, closeModal } = useModal();
 
-    
+    //Récuparation du luncher de modal
+
     useEffect(() => {
         openModal()
         setInfo(props.data)

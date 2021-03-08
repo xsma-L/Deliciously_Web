@@ -1,0 +1,2 @@
+{"_id":{"$oid":"6044e88440d5ed34fb909033"},"name":"broz","type":"burger","adress":"47 avenue d'italie, 75013","city":"paris","picture":"broz-1.jpeg","createdAt":{"$date":"2021-03-07T14:51:48.647Z"},"updatedAt":{"$date":"2021-03-07T14:51:48.647Z"},"__v":0}
+{"_id":{"$oid":"6045bb105c361c64bede4f61"},"name":"L'escapade","type":"Kebab","adress":"8 Avenue de choisy, 75013","city":"Paris","picture":"kebab.jpeg","createdAt":{"$date":"2021-03-08T05:50:08.43Z"},"updatedAt":{"$date":"2021-03-08T05:50:08.43Z"},"__v":0}

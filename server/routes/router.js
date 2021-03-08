@@ -1,10 +1,13 @@
 const express = require('express')
 
+// Importation de user-controller et reataurants-controller
 const RestaurantCtrl = require('../controllers/restaurants-ctrl')
 
 const UserCtrl = require('../controllers/user-ctrl')
 
 const router = express.Router()
+
+// Definition des routes
 
 router.post('/user', UserCtrl.createUser)
 

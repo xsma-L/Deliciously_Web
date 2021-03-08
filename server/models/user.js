@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema
 
+// Definition des valeurs attendu dans la table user
+
 const User = new Schema(
     {
         username: { type: String, lowercase: true, required: true },

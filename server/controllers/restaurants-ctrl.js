@@ -1,5 +1,6 @@
 const Restaurant = require('../models/restaurant-model')
 
+// Création d'une nouvelle ligne en BDD
 exports.createRestaurant = (req, res) => {
     const body = req.body
 
@@ -35,6 +36,7 @@ exports.createRestaurant = (req, res) => {
         })
 }
 
+// Update d'une ligne en BDD
 exports.updateRestaurant = async (req, res) => {
     const body = req.body
 
@@ -77,6 +79,8 @@ exports.updateRestaurant = async (req, res) => {
     })
 }
 
+// Suppression d'une ligne en bdd
+
 exports.deleteRestaurant = async (req, res) => {
     await Restaurant.findOneAndDelete({ _id: req.params.id }, (err, restaurant) => {
         if (err) {
@@ -97,6 +101,8 @@ exports.deleteRestaurant = async (req, res) => {
 
     }).catch(err => console.log(err))
 }
+
+// Recuparation d'un resto par ID
 
 exports.getRestaurantById = async (req, res) => {
     await Restaurant.findOne({_id: req.params.id }, (err, restaurant) => {
@@ -119,6 +125,7 @@ exports.getRestaurantById = async (req, res) => {
     }).catch(err => console.log(err))
 }
 
+// Recuperation de tout les restos
 exports.getRestaurants = async (req, res) => {
     await Restaurant.find({}, (err, restaurant) => {
         if (err) {
