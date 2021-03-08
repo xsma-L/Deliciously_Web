@@ -6,6 +6,7 @@ const saltRounds = 10;
 
 exports.createUser = async (req, res) => {
     const body = req.body
+    console.log(body)
 
     if (!body) {
         return res.status(400).json({
@@ -20,7 +21,7 @@ exports.createUser = async (req, res) => {
     const user = new User(body)
     
     if(!user) {
-        return res.status(400).json({
+        return res.status(404).json({
             succes: false, error: err
         })
     }
@@ -30,13 +31,12 @@ exports.createUser = async (req, res) => {
         .then(() => {
             return res.status(201).json({
                 success: true,
-                id: restaurant._id,
                 message: 'User created',
             })
         })
         .catch(error => {
-            return res.status(400).json({
-                error,
+            return res.status(408).json({
+                success: false,
                 message: 'User not created',
             })
         })
@@ -44,7 +44,7 @@ exports.createUser = async (req, res) => {
 
 exports.userLogin = async (req, res) => {
     const body = req.body
-
+    console.log(body)
     if(!body) {
         return res.status(400).json({
             succes: false,

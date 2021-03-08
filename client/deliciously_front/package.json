@@ -10,6 +10,7 @@
     "multer": "^1.4.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-multi-select-component": "^3.1.5",
     "react-responsive-carousel": "^3.2.13",
     "react-scripts": "4.0.3",
     "react-simple-hook-modal": "^1.1.0",

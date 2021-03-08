@@ -35,15 +35,6 @@
   -webkit-text-stroke: 0.5px black;
 }
 
-#login-wrapper {
-  height: 100%;
-  width: fit-content;
-  float: right;
-  display: flex;
-  flex-direction: row;
-  margin-right: 5%;
-  align-items: center;
-}
 
 #login-wrapper button {
   background: #ff234d;
@@ -64,6 +55,10 @@
   border: 2px solid #000000;
 }
 
+.register-button{
+  margin: 10px;
+}
+
 #wrapper-container{
   height: 100vh;
   display: block !important;
@@ -81,9 +76,66 @@
   align-items: center;
 }
 
+.rsm-max-h-full {
+  height: fit-content !important;
+  width: fit-content !important;
+  min-height: fit-content !important;
+}
 
+form label {
+  font-size: 20px;
+  align-self: baseline;
+  margin-bottom: 5px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
 
+form input {
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid #0c0b0b8c;
+  box-shadow: 5px 8px 9px -6px rgb(4 4 4 / 75%);
+}
 
+input::placeholder {
+  color: black;
+  font-weight: bold;
+  background: white;
+}
+
+.form-select {
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid #0c0b0b8c;
+  box-shadow: 5px 8px 9px -6px rgb(4 4 4 / 75%);
+}
+
+.submit {
+  margin-top: 10px;
+}
+
+.close-modal{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#inscription {
+  background: #fe3e4c;
+  padding: 40px;
+  border-radius: 10%;
+  box-shadow: 0px 0px 13px 0px rgb(87 87 87 / 75%);
+}
+
+#inscription form div {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Catamaran', sans-serif;
+}
 
 .buttons{
   background: #ff234d;
