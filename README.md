@@ -12,7 +12,7 @@ pour avoir ma stack MERN.
 
 2. Ouvrez un autre terminal et aller dans le dossier serveur/BDD.
 
-3. Entrez dans le terminal, "sudo mongoimport --db deliously --collection restaurants --file resaturant.json".
+3. Entrez dans le terminal, "sudo mongoimport --db deliciously --collection restaurants --file resaturant.json".
 
 4. Rendez-vous dans le dossier parent et taper "npm install".
 
